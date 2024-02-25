@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "e3630ec3-22a3-461a-a8a1-3fc8464b0884",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26229608"
+	},
+	"item": [
+		{
+			"name": "Save",
+			"item": [
+				{
+					"name": "Save Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Malam Jumat Kliwon\",\r\n    \"description\": \"Sebuah film horor Indonesia yang mengisahkan kejadian mistis yang terjadi di sebuah desa pada malam Jumat Kliwon, saat kekuatan gaib mencapai puncaknya. Disutradarai oleh Rudi Hartono.\",\r\n    \"rating\": 7.4,\r\n    \"image\": \"https://example.com/malam_jumat_kliwon.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Movie Resp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Malam Jumat Kliwon\",\r\n    \"description\": \"Sebuah film horor Indonesia yang mengisahkan kejadian mistis yang terjadi di sebuah desa pada malam Jumat Kliwon, saat kekuatan gaib mencapai puncaknya. Disutradarai oleh Rudi Hartono.\",\r\n    \"rating\": 7.4,\r\n    \"image\": \"https://example.com/malam_jumat_kliwon.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Feb 2024 16:20:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Movie Success Created\",\n    \"data\": {\n        \"id\": 10,\n        \"title\": \"Malam Jumat Kliwon\",\n        \"description\": \"Sebuah film horor Indonesia yang mengisahkan kejadian mistis yang terjadi di sebuah desa pada malam Jumat Kliwon, saat kekuatan gaib mencapai puncaknya. Disutradarai oleh Rudi Hartono.\",\n        \"rating\": 7.4,\n        \"image\": \"https://example.com/malam_jumat_kliwon.jpg\",\n        \"createdAt\": \"2024-02-23 23:20:29\",\n        \"updatedAt\": \"2024-02-23 23:20:29\"\n    },\n    \"timestamp\": \"2024-02-23T16:20:29.707+00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Save Movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"Pengabdi Setan 2 Comunion\",\r\n        \"description\": \"Dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\r\n        \"rating\": 7.0,\r\n        \"image\": \"https://id.pinterest.com/pin/674203006690104692/\"\r\n    },\r\n    {\r\n        \"title\": \"Pengabdi Setan\",\r\n        \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Film ini disutradarai oleh Joko Anwar dan menjadi salah satu film horor tersukses di Indonesia. Cerita berpusat pada seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki hubungan dengan kekuatan supranatural yang menyeramkan.\",\r\n        \"rating\": 8.0,\r\n        \"image\": \"https://example.com/pengabdi_setan.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Misteri Hutan Gelap\",\r\n        \"description\": \"Sebuah film thriller yang mengisahkan kejadian misterius di dalam hutan gelap, disutradarai oleh Siti Nuraini.\",\r\n        \"rating\": 6.5,\r\n        \"image\": \"https://example.com/misteri_hutan_gelap.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Rahasia Malam\",\r\n        \"description\": \"Film horor yang mengungkap rahasia gelap di sebuah desa terpencil, disutradarai oleh Budi Santoso.\",\r\n        \"rating\": 7.8,\r\n        \"image\": \"https://example.com/rahasia_malam.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Hantu Rumah Kosong\",\r\n        \"description\": \"Sebuah cerita seram tentang hantu-hantu yang menghuni rumah kosong di pinggiran kota, disutradarai oleh Triawan Adi.\",\r\n        \"rating\": 6.2,\r\n        \"image\": \"https://example.com/hantu_rumah_kosong.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Sesal di Malam Jumat\",\r\n        \"description\": \"Film horor komedi yang mengisahkan petualangan lucu dan menyeramkan di malam Jumat, disutradarai oleh Dian Pratiwi.\",\r\n        \"rating\": 7.5,\r\n        \"image\": \"https://example.com/sesal_di_malam_jumat.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Kutukan Pusara\",\r\n        \"description\": \"Sebuah kutukan mengerikan yang terjadi setelah pusara kuno digali kembali, disutradarai oleh Anton Widodo.\",\r\n        \"rating\": 6.9,\r\n        \"image\": \"https://example.com/kutukan_pusara.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Rumah Terlarang\",\r\n        \"description\": \"Film horor yang mengisahkan petualangan menegangkan di dalam rumah terlarang, disutradarai oleh Maya Susanti.\",\r\n        \"rating\": 8.2,\r\n        \"image\": \"https://example.com/rumah_terlarang.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Teror Di Sekolah\",\r\n        \"description\": \"Kejadian misterius dan teror di sebuah sekolah yang menyimpan rahasia kelam, disutradarai oleh Eko Nugroho.\",\r\n        \"rating\": 7.3,\r\n        \"image\": \"https://example.com/teror_di_sekolah.jpg\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/save-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"save-all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Movies Resp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"title\": \"Pengabdi Setan 2 Comunion\",\r\n        \"description\": \"Dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\r\n        \"rating\": 7.0,\r\n        \"image\": \"https://id.pinterest.com/pin/674203006690104692/\"\r\n    },\r\n    {\r\n        \"title\": \"Pengabdi Setan\",\r\n        \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Film ini disutradarai oleh Joko Anwar dan menjadi salah satu film horor tersukses di Indonesia. Cerita berpusat pada seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki hubungan dengan kekuatan supranatural yang menyeramkan.\",\r\n        \"rating\": 8.0,\r\n        \"image\": \"https://example.com/pengabdi_setan.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Misteri Hutan Gelap\",\r\n        \"description\": \"Sebuah film thriller yang mengisahkan kejadian misterius di dalam hutan gelap, disutradarai oleh Siti Nuraini.\",\r\n        \"rating\": 6.5,\r\n        \"image\": \"https://example.com/misteri_hutan_gelap.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Rahasia Malam\",\r\n        \"description\": \"Film horor yang mengungkap rahasia gelap di sebuah desa terpencil, disutradarai oleh Budi Santoso.\",\r\n        \"rating\": 7.8,\r\n        \"image\": \"https://example.com/rahasia_malam.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Hantu Rumah Kosong\",\r\n        \"description\": \"Sebuah cerita seram tentang hantu-hantu yang menghuni rumah kosong di pinggiran kota, disutradarai oleh Triawan Adi.\",\r\n        \"rating\": 6.2,\r\n        \"image\": \"https://example.com/hantu_rumah_kosong.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Sesal di Malam Jumat\",\r\n        \"description\": \"Film horor komedi yang mengisahkan petualangan lucu dan menyeramkan di malam Jumat, disutradarai oleh Dian Pratiwi.\",\r\n        \"rating\": 7.5,\r\n        \"image\": \"https://example.com/sesal_di_malam_jumat.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Kutukan Pusara\",\r\n        \"description\": \"Sebuah kutukan mengerikan yang terjadi setelah pusara kuno digali kembali, disutradarai oleh Anton Widodo.\",\r\n        \"rating\": 6.9,\r\n        \"image\": \"https://example.com/kutukan_pusara.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Rumah Terlarang\",\r\n        \"description\": \"Film horor yang mengisahkan petualangan menegangkan di dalam rumah terlarang, disutradarai oleh Maya Susanti.\",\r\n        \"rating\": 8.2,\r\n        \"image\": \"https://example.com/rumah_terlarang.jpg\"\r\n    },\r\n    {\r\n        \"title\": \"Teror Di Sekolah\",\r\n        \"description\": \"Kejadian misterius dan teror di sebuah sekolah yang menyimpan rahasia kelam, disutradarai oleh Eko Nugroho.\",\r\n        \"rating\": 7.3,\r\n        \"image\": \"https://example.com/teror_di_sekolah.jpg\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/movies/save-all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movies",
+										"save-all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Feb 2024 16:20:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Movies Success Created\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Pengabdi Setan 2 Comunion\",\n            \"description\": \"Dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\n            \"rating\": 7,\n            \"image\": \"https://id.pinterest.com/pin/674203006690104692/\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Pengabdi Setan\",\n            \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Film ini disutradarai oleh Joko Anwar dan menjadi salah satu film horor tersukses di Indonesia. Cerita berpusat pada seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki hubungan dengan kekuatan supranatural yang menyeramkan.\",\n            \"rating\": 8,\n            \"image\": \"https://example.com/pengabdi_setan.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Misteri Hutan Gelap\",\n            \"description\": \"Sebuah film thriller yang mengisahkan kejadian misterius di dalam hutan gelap, disutradarai oleh Siti Nuraini.\",\n            \"rating\": 6.5,\n            \"image\": \"https://example.com/misteri_hutan_gelap.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Rahasia Malam\",\n            \"description\": \"Film horor yang mengungkap rahasia gelap di sebuah desa terpencil, disutradarai oleh Budi Santoso.\",\n            \"rating\": 7.8,\n            \"image\": \"https://example.com/rahasia_malam.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Hantu Rumah Kosong\",\n            \"description\": \"Sebuah cerita seram tentang hantu-hantu yang menghuni rumah kosong di pinggiran kota, disutradarai oleh Triawan Adi.\",\n            \"rating\": 6.2,\n            \"image\": \"https://example.com/hantu_rumah_kosong.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Sesal di Malam Jumat\",\n            \"description\": \"Film horor komedi yang mengisahkan petualangan lucu dan menyeramkan di malam Jumat, disutradarai oleh Dian Pratiwi.\",\n            \"rating\": 7.5,\n            \"image\": \"https://example.com/sesal_di_malam_jumat.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Kutukan Pusara\",\n            \"description\": \"Sebuah kutukan mengerikan yang terjadi setelah pusara kuno digali kembali, disutradarai oleh Anton Widodo.\",\n            \"rating\": 6.9,\n            \"image\": \"https://example.com/kutukan_pusara.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Rumah Terlarang\",\n            \"description\": \"Film horor yang mengisahkan petualangan menegangkan di dalam rumah terlarang, disutradarai oleh Maya Susanti.\",\n            \"rating\": 8.2,\n            \"image\": \"https://example.com/rumah_terlarang.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Teror Di Sekolah\",\n            \"description\": \"Kejadian misterius dan teror di sebuah sekolah yang menyimpan rahasia kelam, disutradarai oleh Eko Nugroho.\",\n            \"rating\": 7.3,\n            \"image\": \"https://example.com/teror_di_sekolah.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        }\n    ],\n    \"timestamp\": \"2024-02-23T16:20:16.536+00:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "Update Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Pengabdi Setan\",\r\n    \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Disutradarai oleh Joko Anwar, film ini menjadi salah satu film horor tersukses di Indonesia. Ceritanya berkisah tentang seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki keterkaitan dengan kekuatan supranatural yang menyeramkan. Dengan atmosfer yang gelap dan jalan cerita yang menegangkan, Pengabdi Setan berhasil menciptakan ketegangan dan ketakutan yang mencekam bagi penontonnya.\",\r\n    \"rating\": 9.1,\r\n    \"image\": \"https://example.com/pengabdi_setan.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Movie Resp",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengabdi Setan\",\r\n    \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Disutradarai oleh Joko Anwar, film ini menjadi salah satu film horor tersukses di Indonesia. Ceritanya berkisah tentang seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki keterkaitan dengan kekuatan supranatural yang menyeramkan. Dengan atmosfer yang gelap dan jalan cerita yang menegangkan, Pengabdi Setan berhasil menciptakan ketegangan dan ketakutan yang mencekam bagi penontonnya.\",\r\n    \"rating\": 9.1,\r\n    \"image\": \"https://example.com/pengabdi_setan.jpg\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/movies/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movies",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Feb 2024 16:40:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Movie updated successfully with id: 2\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Pengabdi Setan\",\n        \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Disutradarai oleh Joko Anwar, film ini menjadi salah satu film horor tersukses di Indonesia. Ceritanya berkisah tentang seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki keterkaitan dengan kekuatan supranatural yang menyeramkan. Dengan atmosfer yang gelap dan jalan cerita yang menegangkan, Pengabdi Setan berhasil menciptakan ketegangan dan ketakutan yang mencekam bagi penontonnya.\",\n        \"rating\": 9.1,\n        \"image\": \"https://example.com/pengabdi_setan.jpg\",\n        \"createdAt\": \"2024-02-23 23:20:16\",\n        \"updatedAt\": \"2024-02-23 23:40:29\"\n    },\n    \"timestamp\": \"2024-02-23T16:40:29.809+00:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Read",
+			"item": [
+				{
+					"name": "Get All Movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Movies Resp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Feb 2024 16:20:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Movie Found\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Pengabdi Setan 2 Comunion\",\n            \"description\": \"Dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\n            \"rating\": 7,\n            \"image\": \"https://id.pinterest.com/pin/674203006690104692/\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Pengabdi Setan\",\n            \"description\": \"Pengabdi Setan adalah sebuah film horor Indonesia yang dirilis pada tahun 2017. Film ini disutradarai oleh Joko Anwar dan menjadi salah satu film horor tersukses di Indonesia. Cerita berpusat pada seorang ibu tunggal dan empat anaknya yang mulai mengalami kejadian mistis setelah sang ibu meninggal dunia. Mereka kemudian menemukan bahwa ibu mereka memiliki hubungan dengan kekuatan supranatural yang menyeramkan.\",\n            \"rating\": 8,\n            \"image\": \"https://example.com/pengabdi_setan.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Misteri Hutan Gelap\",\n            \"description\": \"Sebuah film thriller yang mengisahkan kejadian misterius di dalam hutan gelap, disutradarai oleh Siti Nuraini.\",\n            \"rating\": 6.5,\n            \"image\": \"https://example.com/misteri_hutan_gelap.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Rahasia Malam\",\n            \"description\": \"Film horor yang mengungkap rahasia gelap di sebuah desa terpencil, disutradarai oleh Budi Santoso.\",\n            \"rating\": 7.8,\n            \"image\": \"https://example.com/rahasia_malam.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Hantu Rumah Kosong\",\n            \"description\": \"Sebuah cerita seram tentang hantu-hantu yang menghuni rumah kosong di pinggiran kota, disutradarai oleh Triawan Adi.\",\n            \"rating\": 6.2,\n            \"image\": \"https://example.com/hantu_rumah_kosong.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Sesal di Malam Jumat\",\n            \"description\": \"Film horor komedi yang mengisahkan petualangan lucu dan menyeramkan di malam Jumat, disutradarai oleh Dian Pratiwi.\",\n            \"rating\": 7.5,\n            \"image\": \"https://example.com/sesal_di_malam_jumat.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Kutukan Pusara\",\n            \"description\": \"Sebuah kutukan mengerikan yang terjadi setelah pusara kuno digali kembali, disutradarai oleh Anton Widodo.\",\n            \"rating\": 6.9,\n            \"image\": \"https://example.com/kutukan_pusara.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Rumah Terlarang\",\n            \"description\": \"Film horor yang mengisahkan petualangan menegangkan di dalam rumah terlarang, disutradarai oleh Maya Susanti.\",\n            \"rating\": 8.2,\n            \"image\": \"https://example.com/rumah_terlarang.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Teror Di Sekolah\",\n            \"description\": \"Kejadian misterius dan teror di sebuah sekolah yang menyimpan rahasia kelam, disutradarai oleh Eko Nugroho.\",\n            \"rating\": 7.3,\n            \"image\": \"https://example.com/teror_di_sekolah.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:16\",\n            \"updatedAt\": \"2024-02-23 23:20:16\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Malam Jumat Kliwon\",\n            \"description\": \"Sebuah film horor Indonesia yang mengisahkan kejadian mistis yang terjadi di sebuah desa pada malam Jumat Kliwon, saat kekuatan gaib mencapai puncaknya. Disutradarai oleh Rudi Hartono.\",\n            \"rating\": 7.4,\n            \"image\": \"https://example.com/malam_jumat_kliwon.jpg\",\n            \"createdAt\": \"2024-02-23 23:20:29\",\n            \"updatedAt\": \"2024-02-23 23:20:29\"\n        }\n    ],\n    \"timestamp\": \"2024-02-23T16:20:42.042+00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Movie By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movie By Id Resp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/movies/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movies",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Feb 2024 16:20:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Movie found with id: 1found\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Pengabdi Setan 2 Comunion\",\n        \"description\": \"Dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\n        \"rating\": 7,\n        \"image\": \"https://id.pinterest.com/pin/674203006690104692/\",\n        \"createdAt\": \"2024-02-23 23:20:16\",\n        \"updatedAt\": \"2024-02-23 23:20:16\"\n    },\n    \"timestamp\": \"2024-02-23T16:20:50.803+00:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Delete Movie By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Movie By Id Resp",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/movies/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movies",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Feb 2024 19:47:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Movie deleted successfully with id: 10\",\n    \"data\": true,\n    \"timestamp\": \"2024-02-23T19:47:00.698+00:00\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
