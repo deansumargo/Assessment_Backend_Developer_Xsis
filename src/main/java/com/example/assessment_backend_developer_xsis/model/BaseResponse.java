@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BaseResponse implements java.io.Serializable {
+public class BaseResponse {
     private Boolean success;
     private String message;
     private Object data;
